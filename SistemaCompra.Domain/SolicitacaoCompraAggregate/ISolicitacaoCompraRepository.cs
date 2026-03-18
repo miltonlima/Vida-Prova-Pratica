@@ -2,6 +2,6 @@
 {
     public interface ISolicitacaoCompraRepository
     {
-        void RegistrarCompra(SolicitacaoCompra solicitacaoCompra);
+        System.Threading.Tasks.Task RegistrarCompraAsync(SolicitacaoCompra solicitacaoCompra);
     }
 }

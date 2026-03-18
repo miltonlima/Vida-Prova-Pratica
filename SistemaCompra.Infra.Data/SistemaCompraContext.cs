@@ -13,6 +13,7 @@ namespace SistemaCompra.Infra.Data
 
         public SistemaCompraContext(DbContextOptions options) : base(options) { }
         public DbSet<ProdutoAgg.Produto> Produtos { get; set; }
+        public DbSet<SolicitacaoAgg.SolicitacaoCompra> SolicitacoesCompra { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -21,7 +21,9 @@ namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
             Id = Guid.NewGuid();
             UsuarioSolicitante = new UsuarioSolicitante(usuarioSolicitante);
             NomeFornecedor = new NomeFornecedor(nomeFornecedor);
+            Itens = new List<Item>();
             Data = DateTime.Now;
+            TotalGeral = new Money();
             Situacao = Situacao.Solicitado;
         }
 
@@ -32,7 +34,7 @@ namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
 
         public void RegistrarCompra(IEnumerable<Item> itens)
         {
-           
+            Itens = new List<Item>(itens);
         }
     }
 }
