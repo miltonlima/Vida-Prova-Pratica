@@ -12,7 +12,7 @@ namespace SistemaCompra.Infra.Data.SolicitacaoCompra
             _context = context;
         }
 
-        public async Task RegistrarCompraAsync(SolicitacaoAgg.SolicitacaoCompra solicitacaoCompra)
+        public async Task RegistrarCompra(SolicitacaoAgg.SolicitacaoCompra solicitacaoCompra)
         {
             await _context.Set<SolicitacaoAgg.SolicitacaoCompra>().AddAsync(solicitacaoCompra);
         }
