@@ -21,7 +21,7 @@ namespace SistemaCompra.Application.SolicitacaoCompra.Command.RegistrarCompra
                 request.NomeFornecedor
             );
 
-            await _solicitacaoCompraRepository.RegistrarCompraAsync(solicitacaoCompra);
+            await _solicitacaoCompraRepository.RegistrarCompra(solicitacaoCompra);
 
             return Unit.Value;
         }
