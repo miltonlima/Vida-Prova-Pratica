@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using SistemaCompra.API.Notification;
+using SistemaCompra.Application.SolicitacaoCompra.Notification;
 using SistemaCompra.Domain.ProdutoAggregate;
 using SistemaCompra.Domain.SolicitacaoCompraAggregate;
 using SistemaCompra.Infra.Data;
@@ -36,6 +38,8 @@ namespace SistemaCompra.API
 
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<ISolicitacaoCompraRepository, SolicitacaoCompraRepository>();
+            services.AddScoped<IEmailClienteService, EmailClienteService>();
+            services.AddScoped<IFornecedorNotifierService, FornecedorNotifierService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<SistemaCompraContext>(options =>
